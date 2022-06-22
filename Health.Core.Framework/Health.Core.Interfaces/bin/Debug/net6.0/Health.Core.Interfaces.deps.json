@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Health.Core.Interfaces/1.0.0": {
+        "runtime": {
+          "Health.Core.Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Health.Core.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
