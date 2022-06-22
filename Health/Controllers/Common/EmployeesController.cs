@@ -22,6 +22,8 @@ namespace Health.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Create(int id)
         {
+
+
             return Ok(await _employeesService.Create());
         }
     }
