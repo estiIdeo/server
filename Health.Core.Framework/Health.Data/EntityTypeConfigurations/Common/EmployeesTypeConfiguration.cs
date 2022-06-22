@@ -14,7 +14,7 @@ namespace Health.Data.EntityTypeConfigurations.Common
         public void Configure(EntityTypeBuilder<Employees> builder)
         {
             builder.ToTable("Employees");
-            builder.HasKey(x => x.EmployeeId);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.EmployeeFirstName).IsRequired(false).HasMaxLength(512);
 

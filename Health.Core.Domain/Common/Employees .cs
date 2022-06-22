@@ -4,12 +4,7 @@ namespace Health.Core.Domain
 {
     public class Employees : BaseEntity
     {
-        [Key]
-        public int EmployeeId
-        {
-            get;
-            set;
-        }
+        //  public virtual BaseEntity BaseEntity { get; set; }
         public string EmployeeFirstName
         {
             get;

@@ -24,7 +24,7 @@ namespace Health.Infrastructure.Services
                 Address = "aaa 27"
             });*/
 
-            _dbContext.Employees.FirstOrDefault(e => e.EmployeeId == 1).Address = "ffffff";
+           // _dbContext.Employees.FirstOrDefault(e => e.Id == 1).Address = "ffffff";
             await _dbContext.SaveChangesAsync();
             return true;
         }

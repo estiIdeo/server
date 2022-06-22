@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Health.Data.EntityTypeConfigurations.Common
 {
-    public class EmployeesTypeConfigurations : IEntityTypeConfiguration<Employees>
+    public class EmployeesEnityTypeConfigurations : IEntityTypeConfiguration<Employees>
     {
+
         public void Configure(EntityTypeBuilder<Employees> builder)
         {
             builder.ToTable("Employees");
-            builder.HasKey(x => x.EmployeeId);
 
             builder.Property(x => x.EmployeeFirstName).IsRequired(false).HasMaxLength(512);
 

@@ -1,5 +1,7 @@
 ﻿using Health.Core.Domain;
+using Health.Core.Domain.Common;
 using Health.Data.EntityTypeConfigurations.Common;
+using Health.Data.EntityTypeConfigurations.Tag;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Configuration;
@@ -14,10 +16,20 @@ namespace Health.Data
         }
 
         public DbSet<Employees> Employees{ get;set;}
+        public DbSet<Tag> Tags{ get;set;}
+        public DbSet<ObjectTag> ObjectTags{ get;set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new EmployeesTypeConfigurations());
+            foreach (var entity in modelBuilder.Model.GetEntityTypes().Where(e => typeof(BaseEntity).IsAssignableFrom(e.ClrType)))
+            {
+                modelBuilder.Entity(entity.Name).HasKey(nameof(BaseEntity.Id));
+                modelBuilder.Entity(entity.Name).Property(nameof(BaseEntity.UpdatedDate));
+                modelBuilder.Entity(entity.Name).Property(nameof(BaseEntity.CreatedDate));
+            }
+            modelBuilder.ApplyConfiguration(new EmployeesEnityTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new TagsTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new ObjectTagsTypeConfigurations());
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

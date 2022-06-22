@@ -1,5 +1,5 @@
-﻿dotnet ef migrations add "init" --project "C:\Health\Health\Health.Data\Health.Data.csproj" --startup-project "C:\Health\Health\Health\Health.csproj"
+﻿dotnet ef migrations add "db_addTag_1" --project "C:\health\server\Health.Data\Health.Data.csproj" --startup-project "C:\health\server\Health\Health.csproj"
 
-dotnet ef database update --project "C:\Health\Health\Health.Data\Health.Data.csproj" --startup-project "C:\Health\Health\Health\Health.csproj" 
+dotnet ef database update --project "C:\health\server\Health.Data\Health.Data.csproj" --startup-project "C:\health\server\Health\Health.csproj" 
 
-dotnet ef migrations remove --project "C:\Health\Health\Health.Data\Health.Data.csproj" --startup-project "C:\Health\Health\Health\Health.csproj"
+dotnet ef migrations remove --project "C:\health\server\Health.Data\Health.Data.csproj" --startup-project "C:\health\server\Health\Health.csproj"
