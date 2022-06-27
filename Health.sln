@@ -25,11 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Infrastructure.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Web.Security", "Health.Web.Security\Health.Web.Security.csproj", "{FFBF540C-4442-4F84-A75B-2FD5F85641E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Health.Core.Framework", "Health.Core.Framework\Health.Core.Framework.csproj", "{5185BE3F-D6EC-41E0-8B69-45443990C964}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Core.Framework", "Health.Core.Framework\Health.Core.Framework.csproj", "{5185BE3F-D6EC-41E0-8B69-45443990C964}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Health.Web.Extensions", "Health.Web.Extensions\Health.Web.Extensions.csproj", "{61EE4C1D-DF64-4413-A9D2-3EA510DE3B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Web.Extensions", "Health.Web.Extensions\Health.Web.Extensions.csproj", "{61EE4C1D-DF64-4413-A9D2-3EA510DE3B15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Health.DataAccessLayer", "Health.DataAccessLayer\Health.DataAccessLayer.csproj", "{7CA19A7E-1C02-472E-A33C-480F2F623224}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.DataAccessLayer", "Health.DataAccessLayer\Health.DataAccessLayer.csproj", "{7CA19A7E-1C02-472E-A33C-480F2F623224}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

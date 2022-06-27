@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Health.Core.Domain
+﻿namespace Health.Core.Domain
 {
     public class Employees : BaseEntity
     {

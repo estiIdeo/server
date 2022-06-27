@@ -1,6 +1,6 @@
-﻿dotnet ef migrations add "db_add_users_and_roles" --project "C:\Projects\ServerHealth\server\Health.Data\Health.Data.csproj" --startup-project "C:\Projects\ServerHealth\server\Health\Health.csproj"
+﻿dotnet ef migrations add "db_add_users_and_roles" --project "C:\health\server\Health.Data\Health.Data.csproj" --startup-project "C:\health\server\Health\Health.csproj"
 
-dotnet ef database update --project "C:\Projects\ServerHealth\server\Health.Data\Health.Data.csproj" --startup-project "C:\Projects\ServerHealth\server\Health\Health.csproj" 
+dotnet ef database update --project "C:\health\server\Health.Data\Health.Data.csproj" --startup-project "C:\health\server\Health\Health.csproj" 
 
-dotnet ef migrations remove --project "C:\Projects\ServerHealth\server\Health.Data\Health.Data.csproj" --startup-project "C:\Projects\ServerHealth\server\Health\Health.csproj"
+dotnet ef migrations remove --project "C:\health\server\Health.Data\Health.Data.csproj" --startup-project "C:\health\server\Health\Health.csproj"
 

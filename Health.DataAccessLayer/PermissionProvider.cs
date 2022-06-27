@@ -2,11 +2,6 @@
 using Health.Core.Framework.Account.Security;
 using Health.Core.Interfaces.Providers;
 using Health.Core.Types.Application;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static Health.Core.Types.Application.DefaultPermissions;
 namespace Health.DataAccessLayer
 {
@@ -176,7 +171,7 @@ namespace Health.DataAccessLayer
 
                     }
                 },
-               
+
                 new RoleApplicationPermissionLogicModel
                 {
                     RoleId = 3,

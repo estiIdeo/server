@@ -2,11 +2,6 @@
 using Health.Core.Types.Application;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Health.Data.EntityTypeConfigurations.Identity
 {
@@ -24,7 +19,7 @@ namespace Health.Data.EntityTypeConfigurations.Identity
                 Id = 1,
                 Name = Constants.Configuration.Identity.Roles.Admin,
                 IsSystem = true,
-                ParentRoleId=0,
+                ParentRoleId = 0,
                 NormalizedName = Constants.Configuration.Identity.Roles.Admin.ToUpper()
             }, new ApplicationRole
             {

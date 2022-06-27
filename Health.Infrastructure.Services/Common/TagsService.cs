@@ -6,17 +6,17 @@ using Health.Data;
 
 namespace Health.Infrastructure.Services
 {
-    public class EmployeesService : IEmployeesService
+    public class TagsService : ITagsService
     {
         private readonly HealthDbContext _dbContext;
-        public EmployeesService(HealthDbContext dbContext)
+        public TagsService(HealthDbContext dbContext)
         {
             _dbContext = dbContext;
         }
         public async Task<bool> Create()
         {
 
-            /* await _dbContext.Employees.AddAsync(new Employees()
+            /* await _dbContext.Tags.AddAsync(new Tags()
              {
                  EmployeeLastName = "Aviv2",
                  EmployeeFirstName = "Avi2",
@@ -25,7 +25,7 @@ namespace Health.Infrastructure.Services
                  Address = "aaa 27"
              });*/
 
-            // _dbContext.Employees.FirstOrDefault(e => e.Id == 1).Address = "ffffff";
+            // _dbContext.Tags.FirstOrDefault(e => e.Id == 1).Address = "ffffff";
             await _dbContext.SaveChangesAsync();
             return true;
         }

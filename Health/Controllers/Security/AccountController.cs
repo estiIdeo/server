@@ -13,7 +13,7 @@ using System.Net;
 namespace Health.Controllers.Security
 {
     [Route("~/api/[controller]")]
-    public class AccountController: HealthApiController
+    public class AccountController : HealthApiController
     {
         #region Fields
         private readonly ILogger<AccountController> _logger;

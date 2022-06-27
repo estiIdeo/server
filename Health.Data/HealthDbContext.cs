@@ -20,9 +20,9 @@ namespace Health.Data
             this._permissionProvider = permissionProvider;
         }
 
-        public DbSet<Employees> Employees{ get;set;}
-        public DbSet<Tag> Tags{ get;set;}
-        public DbSet<ObjectTag> ObjectTags{ get;set; }
+        public DbSet<Employees> Employees { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<ObjectTag> ObjectTags { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<ApplicationRole> Roles { get; set; }
         public DbSet<ApplicationUser> Users { get; set; }
@@ -47,7 +47,7 @@ namespace Health.Data
             modelBuilder.ApplyConfiguration(new ApplicationClaimTypeConfigurations());
             modelBuilder.ApplyConfiguration(new ApplicationPermissionsTypeConfigurations(_permissionProvider));
             modelBuilder.ApplyConfiguration(new ApplicationPermissionRolessTypeConfigurations(_permissionProvider));
-            
+
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

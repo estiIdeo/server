@@ -1,9 +1,5 @@
 using Health;
-using Health.Core.Interfaces;
-using Health.Data;
-using Health.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 [assembly: ApiController]
 
