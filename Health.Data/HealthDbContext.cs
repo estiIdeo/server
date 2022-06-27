@@ -1,6 +1,10 @@
 ﻿using Health.Core.Domain;
 using Health.Core.Domain.Common;
+using Health.Core.Domain.Identity;
+using Health.Core.Interfaces.Providers;
+using Health.Core.Types.Application;
 using Health.Data.EntityTypeConfigurations.Common;
+using Health.Data.EntityTypeConfigurations.Identity;
 using Health.Data.EntityTypeConfigurations.Tag;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -10,14 +14,21 @@ namespace Health.Data
 {
     public class HealthDbContext : DbContext
     {
-        public HealthDbContext(DbContextOptions<HealthDbContext> options) : base(options)
+        private readonly IPermissionProvider _permissionProvider;
+        public HealthDbContext(DbContextOptions<HealthDbContext> options, IPermissionProvider permissionProvider) : base(options)
         {
-
+            this._permissionProvider = permissionProvider;
         }
 
         public DbSet<Employees> Employees{ get;set;}
         public DbSet<Tag> Tags{ get;set;}
         public DbSet<ObjectTag> ObjectTags{ get;set; }
+        public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<ApplicationRole> Roles { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<ApplicationPermission> Permissions { get; set; }
+        public DbSet<PermissionRole> PermissionRoles { get; set; }
+        public DbSet<ApplicationClaim> RoleDefaultClaimsValues { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +41,13 @@ namespace Health.Data
             modelBuilder.ApplyConfiguration(new EmployeesEnityTypeConfigurations());
             modelBuilder.ApplyConfiguration(new TagsTypeConfigurations());
             modelBuilder.ApplyConfiguration(new ObjectTagsTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new ApplicationUserTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new RoleTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new UserRoleTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new ApplicationClaimTypeConfigurations());
+            modelBuilder.ApplyConfiguration(new ApplicationPermissionsTypeConfigurations(_permissionProvider));
+            modelBuilder.ApplyConfiguration(new ApplicationPermissionRolessTypeConfigurations(_permissionProvider));
+            
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
