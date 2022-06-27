@@ -11,16 +11,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ideo.Data.EntityFrameworkCore.AuditLog" Version="2.1.41" />
+    <PackageReference Include="Ideo.Data.UnitOfWork" Version="2.1.9" />
+    <PackageReference Include="Ideo.Data.UnitOfWork.Core" Version="2.0.8" />
+    <PackageReference Include="Ideo.Framework.CRUD.Core" Version="2.1.13" />
+    <PackageReference Include="Ideo.Web.Security.Authentication.Core" Version="5.0.2" />
+    <PackageReference Include="Ideo.Web.Security.Authentication.RefreshTokens" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.20.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Health.Core.Interfaces\Health.Core.Interfaces.csproj" />
     <ProjectReference Include="..\Health.Data\Health.Data.csproj" />
     <ProjectReference Include="..\Health.Infrastructure.Services\Health.Infrastructure.Services.csproj" />
+    <ProjectReference Include="..\Health.Web.Extensions\Health.Web.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

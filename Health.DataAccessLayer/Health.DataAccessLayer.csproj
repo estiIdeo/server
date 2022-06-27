@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ideo.Data.UnitOfWork" Version="2.1.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Health.Core.Framework\Health.Core.Framework.csproj" />
+    <ProjectReference Include="..\Health.Core.Interfaces\Health.Core.Interfaces.csproj" />
+    <ProjectReference Include="..\Health.Data\Health.Data.csproj" />
+  </ItemGroup>
+
+</Project>

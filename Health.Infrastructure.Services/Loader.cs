@@ -1,5 +1,7 @@
 ﻿using Health.Core.Interfaces;
+using Health.Core.Interfaces.Providers;
 using Health.Data;
+using Health.DataAccessLayer;
 using Health.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +17,7 @@ namespace Health
         public static IServiceCollection AddHealthServices(this IServiceCollection services)
         {
             services.AddScoped<IEmployeesService, EmployeesService>();
+            services.AddSingleton<IPermissionProvider, PermissionProvider>();
             return services;
         }
     }

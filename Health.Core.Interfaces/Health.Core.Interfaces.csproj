@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Ideo.Framework.CRUD.Core" Version="2.1.13" />
+    <PackageReference Include="Ideo.Web.CRUD.QueryBuilder.Core" Version="2.1.18" />
+    <PackageReference Include="Ideo.Web.Security.Authentication.RefreshTokens" Version="5.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Health.Core.Domain\Health.Core.Domain.csproj" />
+    <ProjectReference Include="..\Health.Core.Framework\Health.Core.Framework.csproj" />
+    <ProjectReference Include="..\Health.Core\Health.Core.csproj" />
+  </ItemGroup>
+
 </Project>

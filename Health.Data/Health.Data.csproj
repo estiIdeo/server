@@ -14,12 +14,12 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.26" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Health.Core.Domain\Health.Core.Domain.csproj" />
+    <ProjectReference Include="..\Health.Core.Interfaces\Health.Core.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
