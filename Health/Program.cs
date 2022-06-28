@@ -12,6 +12,20 @@ builder.Services.AddControllers();
 builder.Services.AddMvc();
 builder.Services.AddHealthServices();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder
+            //.AllowAnyOrigin()
+            .WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials()
+            .SetIsOriginAllowed((host) => true)
+            .WithExposedHeaders("Content-Disposition");
+    });
+});
 
 var app = builder.Build();
 
@@ -25,6 +39,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors();
+
 
 app.UseRouting();
 

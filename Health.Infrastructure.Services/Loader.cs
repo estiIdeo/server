@@ -17,6 +17,7 @@ namespace Health
         public static IServiceCollection AddHealthServices(this IServiceCollection services)
         {
             services.AddScoped<IEmployeesService, EmployeesService>();
+            services.AddScoped<ITagsService, TagsService>();
             services.AddSingleton<IPermissionProvider, PermissionProvider>();
             return services;
         }

@@ -1,6 +1,7 @@
 ﻿
 
 
+using Health.Core.Domain.Common;
 using Health.Core.Interfaces;
 using Health.Data;
 
@@ -13,19 +14,15 @@ namespace Health.Infrastructure.Services
         {
             _dbContext = dbContext;
         }
-        public async Task<bool> Create()
+        public async Task<bool> Create(Tag model)
         {
 
-            /* await _dbContext.Tags.AddAsync(new Tags()
+             await _dbContext.Tags.AddAsync(new Tag()
              {
-                 EmployeeLastName = "Aviv2",
-                 EmployeeFirstName = "Avi2",
-                 Salary = 74000,
-                 Designation = "Development2",
-                 Address = "aaa 27"
-             });*/
+                 Name = model.Name,
+                 Color = model.Color
+             });
 
-            // _dbContext.Tags.FirstOrDefault(e => e.Id == 1).Address = "ffffff";
             await _dbContext.SaveChangesAsync();
             return true;
         }

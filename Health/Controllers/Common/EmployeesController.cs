@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Health.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("~/api/[controller]")]
+
     public class EmployeesController : ControllerBase
     {
         private HealthDbContext _dbContext;
