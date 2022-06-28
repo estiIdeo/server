@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Health.Core.Domain.Identity
 {
@@ -33,7 +28,7 @@ namespace Health.Core.Domain.Identity
         public DateTime CreateDate { get; set; } = DateTime.UtcNow;
 
         //public bool? IsApproved { get; set; }
-       
+
         public virtual ICollection<UserRole> Roles { get; set; }
 
 

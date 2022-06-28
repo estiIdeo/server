@@ -23,14 +23,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
-using static Health.Core.Constants.Configuration.Identity;
 
 namespace Health.Infrastructure.Services.Account
 {
@@ -95,7 +90,7 @@ namespace Health.Infrastructure.Services.Account
             var refreshToken = await _refreshTokensService.Refresh(request);
             if (refreshToken != null && refreshToken.UserId != default)
             {
-                var user = await _uow.Repository<ApplicationUser>().FirstOrDefaultAsync(x => x.Id == refreshToken.UserId, includeProperties: new[] { "Roles.Role"});
+                var user = await _uow.Repository<ApplicationUser>().FirstOrDefaultAsync(x => x.Id == refreshToken.UserId, includeProperties: new[] { "Roles.Role" });
                 if (user != null)
                 {
                     return await GenerateToken(user, refreshToken, refreshToken.Jti);

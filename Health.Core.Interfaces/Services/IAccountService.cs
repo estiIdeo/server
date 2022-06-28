@@ -1,11 +1,6 @@
 ﻿using Health.Core.Framework.Account.Authentication;
 using Health.Core.Framework.Account.Users;
 using Ideo.NetCore.Web.Security.Authentication.RefreshToken.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Health.Core.Interfaces.Services
 {

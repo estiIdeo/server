@@ -1,12 +1,7 @@
 ﻿using Health.Web.Extensions.Models;
 using Ideo.NetCore.Web.Security.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using static Health.Core.Constants.Configuration.Identity;
 
 namespace Health.Web.Extensions.Common
