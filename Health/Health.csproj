@@ -17,8 +17,13 @@
     <PackageReference Include="Ideo.Data.UnitOfWork" Version="2.1.9" />
     <PackageReference Include="Ideo.Data.UnitOfWork.Core" Version="2.0.8" />
     <PackageReference Include="Ideo.Framework.CRUD.Core" Version="2.1.13" />
+    <PackageReference Include="Ideo.Framework.Sms.Core" Version="2.0.1" />
+    <PackageReference Include="Ideo.Framework.Sms.InforUMobile" Version="2.1.0" />
+    <PackageReference Include="Ideo.Web.Security.Authentication.2FA.OTP" Version="2.1.11" />
     <PackageReference Include="Ideo.Web.Security.Authentication.Core" Version="5.0.2" />
     <PackageReference Include="Ideo.Web.Security.Authentication.RefreshTokens" Version="5.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
