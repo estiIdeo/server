@@ -34,7 +34,6 @@ namespace Health.Infrastructure.Services.Account
         #region Fields
         private readonly ILogger<AccountService> _logger;
         private readonly IUnitOfWork _uow;
-        private readonly IUsersService _usersService;
         private readonly IOtpService _otpService;
         private readonly IHttpContextAccessor _actionContextAccessor;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -53,7 +52,6 @@ namespace Health.Infrastructure.Services.Account
         public AccountService(ILogger<AccountService> logger,
             IUnitOfWork uow,
             IConfiguration configuration,
-            IUsersService usersService,
             IOtpService otpService,
             IHttpContextAccessor actionContextAccessor,
             UserManager<ApplicationUser> userManager,
@@ -69,7 +67,6 @@ namespace Health.Infrastructure.Services.Account
         {
             this._logger = logger;
             this._uow = uow;
-            this._usersService = usersService;
             this._otpService = otpService;
             this._actionContextAccessor = actionContextAccessor;
             this._userManager = userManager;
